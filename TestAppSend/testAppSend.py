@@ -5,7 +5,7 @@ api = clockwork.API('f28dbd49244e960260e9a5d40de3411fb635ac5d')
 message = clockwork.SMS(
     to = '447814963513',
     message = 'Imagine a different random number.',
-    from_name = 'AnIdiot')
+    from_name = 'RandSMS')
 
  
 response = api.send(message)
