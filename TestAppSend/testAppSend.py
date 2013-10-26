@@ -13,8 +13,7 @@ message = clockwork.SMS(
     from_name = 'RandSMS')
 
  
-# response = api.send(message)
-response = 1
+response = api.send(message)
  
 if response.success:
     print (response.id)
