@@ -3,15 +3,6 @@ import sys
 sys.path.append('./lxml-3.2.3/src')
 import clockwork
 
-#print "Content-Type: text/html"
-#print
-#print """\
-#<html>
-#<body>
-#<h2>Hello World!</h2>
-#</body>
-#</html>
-#"""
 api = clockwork.API('f28dbd49244e960260e9a5d40de3411fb635ac5d')
  
 message = clockwork.SMS(
@@ -20,7 +11,8 @@ message = clockwork.SMS(
     from_name = 'RandSMS')
 
  
-response = api.send(message)
+# response = api.send(message)
+response = 1
  
 if response.success:
     print (response.id)
