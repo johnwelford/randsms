@@ -1,1 +1,1 @@
-A readme for the most basic program imagininable
+A readme for the most basic program imaginable
