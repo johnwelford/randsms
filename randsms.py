@@ -7,8 +7,8 @@ import random
 form = cgi.FieldStorage()
 
 import sys
-sys.path.append('../../utils/lxml-3.2.3/src')
-sys.path.append('../../utils/clockwork')
+sys.path.append('../utils/lxml-3.2.3/src')
+sys.path.append('../utils/clockwork')
 
 import clockwork
 
