@@ -25,18 +25,17 @@ f.close();
 stringNum = form.getvalue("content")
 
 # Can we tokenise the string?
-isList = re.search('^.*(,|\n|\r).*$', stringNum)
-if isList:
+listTokens = re.split(',|\n|\r', stringNum)
+if len(listTokens)>1:
 	# Select a random list element
-	listTokens = re.split(',|\n|\r', stringNum)
 	selIdx = random.randrange(len(listTokens))
 	textContent = listTokens[selIdx]
 else:
 	if str.isdigit(stringNum):
-		# Pick a random list element
+		# Pick a random number in the specified range
 		textContent = random.randrange(int(stringNum))
 	else:
-		textContent = 'Input parse error'
+		textContent = "Message not understood. Please submit either a single positive integer or a list seperated by commas or returns."
 
 # send response
 message = clockwork.SMS(
