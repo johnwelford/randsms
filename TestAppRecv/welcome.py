@@ -15,9 +15,12 @@ number = int(form.getvalue("number"))
 #<h2>Hello World!</h2>
 #"""
 #print "The user entered %s" % random.randrange(number)
+
 f = open('MessageRevievedFile.csv', 'a')
-print >>f "The user entered %s" % random.randrange(number)
+string = "The user entered %s\n" % random.randrange(number)
+f.write(string)
 f.close();
+
 #print """\
 #</body>
 #</html>
