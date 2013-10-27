@@ -15,7 +15,7 @@ cgitb.enable()
 api = clockwork.API('f28dbd49244e960260e9a5d40de3411fb635ac5d')
 form = cgi.FieldStorage()
 
-# write to log file
+# Write to log file
 f = open('MessageRevievedFile.csv', 'a')
 string = "%s, %s\n" %(form.getvalue("from"), form.getvalue("content"))
 f.write(string)
@@ -37,7 +37,7 @@ else:
 	else:
 		textContent = "Message not understood. Please submit either a single positive integer or a list separated by commas or returns."
 
-# send response
+# Send text via Clockwork API response
 message = clockwork.SMS(
 	to = form.getvalue("from"),
 	message = textContent,
@@ -45,8 +45,4 @@ message = clockwork.SMS(
 
 response = api.send(message)
 
-# produce response
-if response.success:
-	print "HTTP/1.1 200 OK"
-else:
-	print "HTTP/1.1 500 Internal Server Error"
+print "HTTP/1.1 200 OK"
