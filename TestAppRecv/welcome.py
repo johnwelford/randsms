@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+import cgitb
+cgitb.enable()
 
 import cgi
 import random
