@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 
 import cgi
+import random
 form = cgi.FieldStorage()
 print "Content-Type: text/html"
-
+number = int(form.getvalue("number"))
 
 print
 print """\
@@ -11,7 +12,7 @@ print """\
 <body>
 <h2>Hello World!</h2>
 """
-print "The user entered %s" % form.getvalue("name") 
+print "The user entered %s" % random.randrange(number)
 print """\
 </body>
 </html>
