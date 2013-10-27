@@ -17,7 +17,7 @@ form = cgi.FieldStorage()
 #print "The user entered %s" % random.randrange(number)
 
 f = open('MessageRevievedFile.csv', 'a')
-string = "%s, %s\n" %(form.getvalue("From"), form.getvalue("Content"))
+string = "%s, %s\n" %(form.getvalue("from"), form.getvalue("content"))
 f.write(string)
 f.close();
 
