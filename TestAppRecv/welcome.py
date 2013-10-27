@@ -6,7 +6,7 @@ import cgi
 import random
 form = cgi.FieldStorage()
 #print "Content-Type: text/html"
-number = int(form.getvalue("number"))
+# number = int(form.getvalue("number"))
 
 #print
 #print """\
@@ -17,7 +17,7 @@ number = int(form.getvalue("number"))
 #print "The user entered %s" % random.randrange(number)
 
 f = open('MessageRevievedFile.csv', 'a')
-string = "The user entered %s\n" % random.randrange(number)
+string = "%s, %s\n" %(form.getvalue("From"), form.getvalue("Content"))
 f.write(string)
 f.close();
 
