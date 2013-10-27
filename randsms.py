@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # libraries and input setup
+import sys
 sys.path.append('../utils/lxml-3.2.3/src')
 sys.path.append('../utils/clockwork')
 
@@ -7,7 +8,6 @@ import cgitb
 import cgi
 import random
 import re
-import sys
 import clockwork
 
 cgitb.enable()
