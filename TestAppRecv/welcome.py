@@ -4,7 +4,7 @@ import cgi
 import random
 form = cgi.FieldStorage()
 print "Content-Type: text/html"
-number = int(form.getvalue("number"))
+number = int(form.getvalue("number"))+1
 
 print
 print """\
