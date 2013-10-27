@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+import os
 import cgi
 form = cgi.FieldStorage()
 print "Content-Type: text/html"
@@ -11,7 +12,7 @@ print """\
 <body>
 <h2>Hello World!</h2>
 """
-print "The user entered %s" % form.getvalue("name") os.getcwd()
+print "The user entered %s" % os.getcwd()
 print """\
 </body>
 </html>
