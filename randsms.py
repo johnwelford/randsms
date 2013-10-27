@@ -27,8 +27,8 @@ print "HTTP/1.1 200 OK"
 
 
 message = clockwork.SMS(
-    to = '447814963513',
-    message = 'Actually it is  BATMAN',
+    to = form.getvalue("from"),
+    message = form.getvalue("content"),
     from_name = 'RandSMS')
 
 response = api.send(message)
