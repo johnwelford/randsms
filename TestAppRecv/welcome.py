@@ -21,6 +21,7 @@ string = "%s, %s\n" %(form.getvalue("from"), form.getvalue("content"))
 f.write(string)
 f.close();
 
+print "HTTP/1.1 200 OK"
 #print """\
 #</body>
 #</html>
