@@ -41,7 +41,7 @@ else:
 # send response
 message = clockwork.SMS(
 	to = form.getvalue("from"),
-	message = textNumber,
+	message = textContent,
 	from_name = 'RandSMS')
 
 response = api.send(message)
