@@ -35,7 +35,7 @@ else:
 		# Pick a random number in the specified range
 		textContent = random.randrange(int(stringNum))
 	else:
-		textContent = "Message not understood. Please submit either a single positive integer or a list seperated by commas or returns."
+		textContent = "Message not understood. Please submit either a single positive integer or a list separated by commas or returns."
 
 # send response
 message = clockwork.SMS(
