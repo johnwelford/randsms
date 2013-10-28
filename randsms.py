@@ -33,7 +33,7 @@ if len(listTokens)>1:
 else:
 	if str.isdigit(stringNum):
 		# Pick a random number in the specified range
-		textContent = random.randrange(int(stringNum))
+		textContent = random.randrange(int(stringNum)+1)
 	else:
 		textContent = "Message not understood. Please submit either a single positive integer or a list separated by commas or returns."
 
